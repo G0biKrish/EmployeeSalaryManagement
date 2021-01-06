@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class EmpSalary {
@@ -12,8 +11,9 @@ public class EmpSalary {
 	static int[] overTime;
 
 	public EmpSalary() { // Array Initialization
-		System.out.println("Enter  Number Of Employees\n\n");
+		System.out.println("Enter  Number Of Employees\n");
 		no = sc.nextInt();
+		System.out.println("");
 		name = new String[no];
 		worktime = new int[no];
 		actWorkHours = new int[no];
@@ -77,13 +77,17 @@ public class EmpSalary {
 //method for Display the salary
 	private void showSalary()
 	{
+		System.out.println("");
+		System.out.println("#######################################################################");
+		System.out.println("=======================================================================");
 		System.out.println("No\tWorkhour\tSalary\tOT\tName");
+		System.out.println("=======================================================================");
 		for(int i=0;i<no;i++) 
 		{
 			System.out.println((i+1)+"\t"+actWorkHours[i]+"\t\t"+((actWorkHours[i]*100)+otSalary[i])+"\t"+overTime[i]+"\t"+name[i]);
 		}
 		
-		
+		System.out.println("#######################################################################");
 	}
 //method for reading the employee name
 	private void empName() {
